@@ -2,7 +2,7 @@
 
 Welcome to AgriTrade, a cutting-edge website that embodies the power of dynamic web development. If you're passionate about web development, especially in the realm of JavaScript, MongoDB, and Bootstrap, you've come to the right place! 
 
-![AgriTrade]([insert_image_link_here](https://ogden_images.s3.amazonaws.com/www.motherearthnews.com/images/2022/09/30164039/storage-crops-1100x733.jpg))
+![AgriTrade]
 
 ## Table of Contents
 1. [Introduction](#introduction)
