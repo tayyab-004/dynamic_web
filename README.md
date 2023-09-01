@@ -2,7 +2,7 @@
 
 Welcome to AgriTrade, a cutting-edge website that embodies the power of dynamic web development. If you're passionate about web development, especially in the realm of JavaScript, MongoDB, and Bootstrap, you've come to the right place! 
 
-![AgriTrade]
+## AgriTrade
 
 ## Table of Contents
 1. [Introduction](#introduction)
