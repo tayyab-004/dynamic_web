@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+
+
+    <title>AgriTrade</title>
+  </head>
+  <body>
+    {{>navbar data=details}}
+
+    {{>slider slides=slides}}
+
+    {{!-- banner1 section --}}
+    <section class="banner1_section background1 py-5">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Join us as a Farmer</h1>
+            <p>We are providing this platform to connect local-farmers with urban consumers</p>
+            <button class="btn btn-outline-primary">Join Us</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{!-- services section --}}
+    <section id="services_section" class="py-3">
+
+      <div class="container">
+
+        <h1 class="text-center text-secondary">Our Services</h1>
+
+        <div class="row mt-5">
+
+          {{!-- first service section --}}
+          {{#each services}}
+          <div class="col-md-4">
+
+            <div class="card">
+              <div class="card-body">
+
+                
+                <div class="container text-center py-3 text-secondary">
+                  <i class="{{this.icon}} service_icon"></i>
+                </div>
+                <h5 class="card-title">{{this.title}}</h3>
+                <p>{{this.description}}</p>
+
+                <a href="{{this.link}}">{{this.linkText}}</a>
+                <a href="#!" class="ml-3">Support</a>
+
+
+              </div>
+            </div>
+          
+          </div>
+
+          {{/each}}
+
+        </div>
+
+      </div>
+
+    </section>
+
+    {{!-- banner2 section --}}
+    <section class="banner2_section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center py-3">
+            {{!-- left side --}}
+            <h3>
+              Here we promote healthy crops!
+            </h3>
+            <p>
+              Healthy crops exhibit vibrant and uniform growth, showcasing lush foliage and sturdy stems. These plants display optimal resistance to pests and diseases, while efficiently utilizing nutrients and water, resulting in bountiful and high-quality yields that contribute to sustainable agricultural practices.
+            </p>
+            <button class="btn btn-primary">Read more</button>
+          </div>
+          <div class="col-md-6 text-center py-2">
+            {{!-- right side --}}
+            <img src="/static/images/graphic1.svg" alt="" style="height: 230px;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{!-- banner3 section --}}
+    <section class="banner3_section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center py-2">
+            {{!-- left side --}}
+            <img src="/static/images/graphic2.svg" alt="" style="height: 230px;">
+          </div>
+          <div class="col-md-6 text-center py-3">
+            {{!-- right side --}}
+            <h3>
+              How to grow healthy crops?
+            </h3>
+            <p>
+              Begin with nutrient-rich soil, ensuring proper drainage and pH levels, and amend as needed. Implement crop rotation and diversify plantings to reduce pest and disease pressure. Monitor and manage irrigation, providing consistent water while avoiding overwatering, and use organic and integrated pest management techniques for a thriving and sustainable crop yield.
+            </p>
+            <button class="btn btn-primary">Read more</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{!-- contact us section --}}
+    <section id="contact_us_section" class="py-5 background1">
+      <div class="container">
+        <h3 class="text-center text-secondary">Contact Us</h3>
+        <div class="row">
+          <div class="col-md-12">
+
+            <form action="/process-contact-form" method="post">
+
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Your email address</label>
+                <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="contactNumberField" class="form-label">Your contact number</label>
+                <input name="phone" type="number" class="form-control" id="exampleInputPassword1">
+              </div>
+
+              <div class="form-floating my-2">
+                <textarea name="query" style="height: 250px;" class="form-control" placeholder="Enter your query here" id="floatingTextarea"></textarea>
+                <label style="color:black;" for="queryField">Your query</label>
+              </div>
+
+              <div class="container text-center">
+                <button type="submit" class="btn btn-dark">Submit</button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{!-- about us section --}}
+    <section id="about_us_section" class="about_section py-5">
+      
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>About Us</h3>
+            <p>
+              Connecting farmers, consumers, and promoting healthy agriculture.
+            </p>
+            <button class="btn btn-success btn-lg">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer background1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center p-4">
+                © 2023-24 copyright: <span>AgriTrade</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
