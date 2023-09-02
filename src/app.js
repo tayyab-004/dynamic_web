@@ -24,7 +24,7 @@ hbs.registerPartials("views/partials")
 
 // db connection
 mongoose.set('strictQuery', false);
-mongoose.connect('mongodb+srv://aslibutt333:aslibutt333@cluster0.vpubwdz.mongodb.net/?retryWrites=true&w=majority', () => {
+mongoose.connect(`mongodb+srv://aslibutt333:aslibutt333@cluster0.vpubwdz.mongodb.net/?retryWrites=true&w=majority`, () => {
     console.log("DataBase connected!");
 
     // Service.create([
