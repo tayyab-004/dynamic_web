@@ -11,7 +11,6 @@ Welcome to AgriTrade, a cutting-edge website that embodies the power of dynamic 
 4. [Getting Started](#getting-started)
 5. [Contact Us](#contact-us)
 6. [Contributions](#contributions)
-7. [License](#license)
 
 ## Introduction
 
@@ -53,8 +52,5 @@ We value your feedback and inquiries! Feel free to reach out to us using the Con
 
 We welcome contributions from the dynamic web development community. If you have ideas for improvements, bug fixes, or new features, please open an issue or submit a pull request. Let's grow together!
 
-## License
-
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the terms of the license.
 
 Thank you for choosing AgriTrade for your dynamic web development journey. Happy coding! 🚀
