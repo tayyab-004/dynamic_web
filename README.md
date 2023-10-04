@@ -1,10 +1,11 @@
 # AgriTrade - Your One-Stop Destination for Dynamic Web Development
 
-Welcome to AgriTrade, a cutting-edge website that embodies the power of dynamic web development. If you're passionate about web development, especially in the realm of JavaScript, MongoDB, and Bootstrap, you've come to the right place! 
+Welcome to AgriTrade, a cutting-edge website that embodies the power of dynamic web development. If you're passionate about web development, especially in the realm of JavaScript, MongoDB, and Bootstrap, you've come to the right place!
 
 ## AgriTrade
 
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Technologies Used](#technologies-used)
@@ -38,11 +39,27 @@ AgriTrade is more than just a website; it's a journey into the exciting world of
 
 Clone this repository to get started with your journey into dynamic web development with AgriTrade. The following commands will guide you:
 
-
 git clone [https://github.com/your-username/AgriTrade.git](https://github.com/tayyab-004/dynamic_web)
 cd AgriTrade
+
+Create a .env file and add:
+
+1. PORT on which you want to run application locally.
+2. DB_CONNECTION_STRING from your mongoDB to connect your database.
+
 # Follow the installation instructions in the README or documentation.
+
+Install dependencies:
+
+```
+npm i
+```
+
+Run application locally by:
+
+```
 npm start
+```
 
 ## Contact Us
 
@@ -51,6 +68,5 @@ We value your feedback and inquiries! Feel free to reach out to us using the Con
 ## Contributions
 
 We welcome contributions from the dynamic web development community. If you have ideas for improvements, bug fixes, or new features, please open an issue or submit a pull request. Let's grow together!
-
 
 Thank you for choosing AgriTrade for your dynamic web development journey. Happy coding! 🚀
