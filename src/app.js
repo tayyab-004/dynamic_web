@@ -1,30 +1,35 @@
-const express = require('express');
-const hbs = require('hbs');
+const express = require("express");
+const hbs = require("hbs");
 const app = express();
-const mongoose = require('mongoose');
-const routes = require('./routes/main');
-const Detail = require('./models/Detail');
-const Slider = require('./models/Slider');
-const Service = require('./models/Service');
-const bodyParser = require('body-parser');
+const mongoose = require("mongoose");
+const { PORT, DB_CONNECTION_STRING } = require("../config/index");
+const routes = require("./routes/main");
+const Detail = require("./models/Detail");
+const Slider = require("./models/Slider");
+const Service = require("./models/Service");
+const bodyParser = require("body-parser");
 
-app.use(bodyParser.urlencoded({
-    extended: true
-}))
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
 
 // /static/css/style.css
-app.use('/static',express.static("public"));
+app.use("/static", express.static("public"));
 // routes
-app.use('', routes);
+app.use("", routes);
 
-// template engine 
-app.set('view engine','hbs');
-app.set("views","views");
-hbs.registerPartials("views/partials")
+// template engine
+app.set("view engine", "hbs");
+app.set("views", "views");
+hbs.registerPartials("views/partials");
 
 // db connection
-mongoose.set('strictQuery', false);
-mongoose.connect(`mongodb+srv://aslibutt333:aslibutt333@cluster0.vpubwdz.mongodb.net/?retryWrites=true&w=majority`, () => {
+mongoose.set("strictQuery", false);
+mongoose.connect(
+  `mongodb+srv://aslibutt333:aslibutt333@cluster0.vpubwdz.mongodb.net/?retryWrites=true&w=majority`,
+  () => {
     console.log("DataBase connected!");
 
     // Service.create([
@@ -69,7 +74,6 @@ mongoose.connect(`mongodb+srv://aslibutt333:aslibutt333@cluster0.vpubwdz.mongodb
     //         },
     //     ])
 
-
     // Detail.create({
     //     brandName: "AgriTrade",
     //     brandIconURL: "https://cdn.britannica.com/90/94190-050-C0BA6A58/Cereal-crops-wheat-reproduction.jpg",
@@ -96,9 +100,7 @@ mongoose.connect(`mongodb+srv://aslibutt333:aslibutt333@cluster0.vpubwdz.mongodb
     //         },
     //     ]
     // })
-});
+  }
+);
 
-
-app.listen(process.env.PORT | 8080,()=> {
-    console.log("server started");
-})
+app.listen(PORT, console.log(`Server is running at port: ${PORT}`));
