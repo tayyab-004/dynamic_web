@@ -2,7 +2,7 @@
   <div class="carousel-indicators">
 
     {{#each slides}}
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{@index}}" class="{{this.class}}" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{@index}}" class="{{#if @first}}active{{/if}}" aria-current="{{#if @first}}true{{/if}}" aria-label="Slide {{@index}}"></button>
     {{/each}}
     {{!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> --}}
@@ -11,7 +11,7 @@
 
 
     {{#each slides}}
-    <div class="carousel-item {{this.class}}">
+    <div class="carousel-item {{#if @first}}active{{/if}}">
       <img src="{{this.imageURL}}" class="d-block w-100 slider-image" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h1>{{this.title}}</h1>

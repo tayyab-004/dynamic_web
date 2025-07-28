@@ -7,7 +7,7 @@ const { create } = require('hbs');
 const routes = express.Router();
 
 routes.get("/", async(req,res) => {
-    const details = await Detail.findOne({"_id":"64d5c088a08bfc0f7b07a18f"})
+    const details = await Detail.findOne()
     const slides = await Slider.find()
     const services = await Service.find()
     // console.log(details)
@@ -21,7 +21,7 @@ routes.get("/", async(req,res) => {
 })
 
 routes.get("/gallery",async(req,res) => {
-    const details = await Detail.findOne({"_id":"64d5c088a08bfc0f7b07a18f"})
+    const details = await Detail.findOne()
     res.render("gallery", {
         details:details
     });
