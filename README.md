@@ -39,13 +39,18 @@ AgriTrade is more than just a website; it's a journey into the exciting world of
 
 Clone this repository to get started with your journey into dynamic web development with AgriTrade. The following commands will guide you:
 
-git clone [https://github.com/your-username/AgriTrade.git](https://github.com/tayyab-004/dynamic_web)
-cd AgriTrade
+```
+git clone https://github.com/tayyab-004/dynamic_web.git
+cd dynamic_web
+```
+
 
 Create a .env file and add:
 
-1. PORT on which you want to run application locally.
-2. DB_CONNECTION_STRING from your mongoDB to connect your database.
+```
+PORT=3000
+DB_CONNECTION_STRING=
+```
 
 # Follow the installation instructions in the README or documentation.
 
